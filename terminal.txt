@@ -1,0 +1,5 @@
+pwd --> donde estoy
+# --> comentario en la terminal
+
+google colaboratory
+GlowScript IDE

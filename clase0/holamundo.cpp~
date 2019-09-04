@@ -1,0 +1,8 @@
+#include<iostream>
+
+int main(void){
+
+  std::cout << "Hola, he vuelto!" << std::endl; // \n cumple la misma funcion que endl
+  return 0;
+
+}
