@@ -1,0 +1,5 @@
+git clase
+
+git commit 1. presionar i-insert
+           2. esc una o varias veces
+	   3. :wq
