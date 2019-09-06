@@ -1,5 +1,7 @@
 pwd --> donde estoy
 # --> comentario en la terminal
+C-c --> matar proceso
+C-z --> suspender proceso
 
 google colaboratory
 GlowScript IDE
