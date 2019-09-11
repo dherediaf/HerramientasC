@@ -1,0 +1,3 @@
+normalizar!!!
+no comparar con igualdad numeros flotantes, mejor con una resta
+| less
