@@ -10,7 +10,7 @@ int main(void)
     {
       b=b/2.0;
       printf("%3d   %10.16e   %10.16e\n", count, b, a+b);
-      count+=1;
+      count++;
     }
   return 0;
 }
