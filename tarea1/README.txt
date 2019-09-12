@@ -1,5 +1,6 @@
 Diego Alejandro Heredia Franco  
 
+FALTA AGREGAR EL .gitignore!!!!!!
 
 1.cpp : programa que imprime cuantos primos hay entre 500 y 12400 asi como su suma.
 
