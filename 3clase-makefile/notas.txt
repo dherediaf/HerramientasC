@@ -1,0 +1,11 @@
+TAB real
+
+make -f "makefile" >> sin extension (i.g .txt)
+//si el archivo se llama Makefile no es necesario el -f "name"
+
+sumas.x : sumaerr.cpp
+	g++ sumaerr.cpp -o sumas.x
+
+$@ reemplaza el target
+$^ reemplaza los input
+$< remmplaza el primer imput
