@@ -1,7 +1,10 @@
+CXXFLAGS=-O2 -Wall #activate optimization level 2
+
+
 all: sumas.x datos.txt fig.pdf #verifica que existan los archivos, y si no, los genera
 
 sumas.x : sumaerr.cpp
-	g++ $^ -o $@  #banderas para omitir nombres y evitar errores
+	g++ $(CXXFLAGS) $^ -o $@  #banderas para omitir nombres y evitar errores
 
 datos.txt : sumas.x
 	./sumas.x > datos.txt #estructura basica

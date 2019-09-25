@@ -2,11 +2,11 @@
 #include <fstream>
 #include <cstdio>
 
-typedef float REAl;
+#include "S1.h"
+#include "S2.h"
+#include "S3.h"
 
-float S1(int n);
-float S2(int n);
-float S3(int n);
+typedef float REAl;
 
 int main(void)
 {
@@ -21,40 +21,4 @@ int main(void)
       std::printf("%3d %10.6e %10.6e %10.6e %10.6e %10.6e\n", n, delta1, delta2, s1, s2, s3);
     }
   return 0;
-}
-
-float S1(int n)
-{
-  float res=0;
-  int sign=-1;
-  for(int i=1; i<=2*n; i++)
-    {
-      res+=sign*i/(i+1.0);
-      sign*=-1;
-    }
-  return res;
-}
-
-
-float S2(int n)
-{
-  float s1=0;
-  float s2=0;
-  for(int i=1; i<=n; i++)
-    {
-      s1+=(2.0*i-1.0)/(2*i);
-      s2+=(2.0*i)/(2.0*i+1.0);
-    }
-  return s2-s1;
-}
-
-
-float S3(int n)
-{
-  float res=0;
-  for(int i=1; i<=n; i++)
-    {
-      res+=1.0/((2.0*i+1.0)*(2.0*i));
-    }
-  return res;
 }

@@ -9,3 +9,8 @@ sumas.x : sumaerr.cpp
 $@ reemplaza el target
 $^ reemplaza los input
 $< remmplaza el primer imput
+
+
+.h hearder
+.cpp declaracion de las funciones con #include "nombre.h"
+para la funcion main se declaran todas las demas funciones con #include "nombre.h"
