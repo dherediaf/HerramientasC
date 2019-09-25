@@ -11,7 +11,7 @@ float S3(int n);
 int main(void)
 {
 
-  for(int n=1; n<=10000; n++)
+  for(int n=1; n<=1000; n++)
     {
       float s1=S1(n);
       float s2=S2(n);
