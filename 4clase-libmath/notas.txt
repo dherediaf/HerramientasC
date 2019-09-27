@@ -1,0 +1,12 @@
+compilar con c++11
+g++ -std=c++11 "archivo.cpp"
+
+plot "datos.txt" u 1:2 w lp
+
+hacer loops sobre enteros es mejor que con flotantes por errores de truncacion
+
+std::mersenne_twister_engine
+
+f(x)=e(-ax)/a
+c(x)=integral(f(x), 0, x)
+x=inversa(c(x))
