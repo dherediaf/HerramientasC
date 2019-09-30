@@ -7,4 +7,4 @@ clean :
 github : *.cpp
 	git add $< notas.txt
 	git commit
-	git push
+	git push origin master

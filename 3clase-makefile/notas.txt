@@ -14,3 +14,6 @@ $< remmplaza el primer imput
 .h hearder
 .cpp declaracion de las funciones con #include "nombre.h"
 para la funcion main se declaran todas las demas funciones con #include "nombre.h"
+
+
+M-X makefile-mode
