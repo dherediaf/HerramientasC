@@ -6,10 +6,10 @@ cubic.x: cubic-distri.cpp
 datos.txt: cubic.x
 	./$< > $@
 
-#plot: datos.txt
-#	gnuplot plot.gp datos.txt
+plot: datos.txt
+	gnuplot plot.gp datos.txt
 
 .PHONY: clean
 clean:
-	rm -f sumas.x datos.txt fig.pdf
+	rm -f cubic.x datos.txt
 
