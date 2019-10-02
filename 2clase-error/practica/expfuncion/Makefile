@@ -1,6 +1,6 @@
-OBJ= expserie.o exph.o
+OBJ= expfrac.o #expserie.o
 
-all: $(OBJ) main.x
+all: $(OBJ) reduceexp.x
 
 %.o: %.cpp
 	g++ -c $< -o $@
