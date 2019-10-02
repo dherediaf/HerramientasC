@@ -1,0 +1,9 @@
+-I para incluir archivos
+-L para incluir librerias
+-l"libname" linkear con una libreria
+
+tar xvf
+
+HACER EL PREFIX EN EL CONFIGURE !!!!!
+
+cmake ../ -DCMAKE_INSTALL_PREFIX=PATH:$HOME/local
