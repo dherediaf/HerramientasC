@@ -1,4 +1,4 @@
-all: cubic.x datos.txt #plot
+all: cubic.x datos.txt fig.pdf 
 
 cubic.x: cubic-distri.cpp
 	g++ -std=c++11 $< -o $@
@@ -6,8 +6,8 @@ cubic.x: cubic-distri.cpp
 datos.txt: cubic.x
 	./$< > $@
 
-plot: datos.txt
-	gnuplot plot.gp datos.txt
+fig.pdf : plot.gp datos.txt
+	gnuplot $<
 
 .PHONY: clean
 clean:

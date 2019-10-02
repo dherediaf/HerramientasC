@@ -1,0 +1,1 @@
+double expserie(double x);
