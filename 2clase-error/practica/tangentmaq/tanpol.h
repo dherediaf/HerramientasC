@@ -1,0 +1,1 @@
+double tanpol(double u);
