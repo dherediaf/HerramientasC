@@ -1,0 +1,10 @@
+C-Shift-T otra pestaña terminal
+
+spack install gsl@2.2 version de un programa
+
+spack install gsl@2.2 %gcc-4.5 version de un programa con un compilado distinto
+
+spack load gsl@2.5 cargar una version
+spack unload gsl@2.5 deshabilitar lo cargado
+
+source share/spack/setup-env.sh si algo se cambia la ruta pero se deja el share/
