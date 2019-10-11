@@ -1,0 +1,19 @@
+-Wall ; activa algunos warnings
+
+-g -fsanitize=address,leak,undefined; dice la linea del error
+
+-g ; debugging
+
+leak: liberar memoria
+undefined: variables indefinidas, dividir por cero
+addres: errores al memoria acceder
+
+gdb ./a.out ; compilando con -g ; gdb --tui ./a.out
+
+br "#linea" ; breakpoint
+run
+n "#lineas"
+print "variable"
+watch "variable"
+
+En emacs M-x gdb many windows despues de abrir gdb
