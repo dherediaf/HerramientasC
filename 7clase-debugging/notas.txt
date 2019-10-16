@@ -8,6 +8,8 @@ leak: liberar memoria
 undefined: variables indefinidas, dividir por cero
 addres: errores al memoria acceder
 
+UTILIZAR GDB:
+
 gdb ./a.out ; compilando con -g ; gdb --tui ./a.out
 
 br "#linea" ; breakpoint
@@ -17,3 +19,15 @@ print "variable"
 watch "variable"
 
 En emacs M-x gdb many windows despues de abrir gdb
+
+
+UTILIZAR DDD:
+
+ddd ./a.out
+graph plot data "nombrearreglo"
+next 600
+
+UTILIZAR VALGRING:
+
+valgrind ./a.out
+valgrind --tool=memcheck --leak-check=yes --track-origins=yes myprog arg1 arg2
