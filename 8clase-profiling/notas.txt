@@ -1,0 +1,23 @@
+time ./a.out ; tiempo en que tardo la ejecucion
+/usr/bin/time ./a.out ; tiempo tardado
+
+PRIFILING EN GPROF:
+
+gcc -Wall -pg "test_gprof".c -o "test_gprof" ; profiling en codigo, -pg activa el prifiling
+./"test_gprof" ; se ejecuta el codigo
+gprof "test_gprof" "gmon.out" > "report".txt ; se redirecciona a un archivo .txt
+
+
+0 1 2 3 4
+5 6 7 8 9  ; matrices en c
+
+0 2 4 6 8
+1 3 5 7 9  ; matrices en fortrand
+
+PROFILING CON PERF:
+
+perf stat ./a.out
+perf stat ./a.out > "profile_summary"
+perf record ./a.out ; perf report
+
+
