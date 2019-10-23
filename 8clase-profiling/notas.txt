@@ -20,4 +20,47 @@ perf stat ./a.out
 perf stat ./a.out > "profile_summary"
 perf record ./a.out ; perf report
 
+PROFILING CON VALGRIND:
+
+Una opcion puede ser:
+gcc -g -ggdb cache_lines.c
+valgrind --tool=callgrind ./a.out
+callgrind_annotate --auto=yes callgrind.out.17968 | most
+kcachegrind calgrind.out.17968
+
+Otra opcion puede ser, para mas info:
+valgrind --tool=callgrind --dump-instr=yes --collect-jumps=yes ./a.out
+kcachegrind callgrind.out.18817
+
+--> malloc: memory location
+
+Acceder eficientemente a la cache:
+valgrind --tool=callgrind --tool=cachegrind ./a.out
+kcacheline cachegrind.out.18953
+callgrind_annotate --auto=yes cachegrind.out.18953 | most : Desde la consola
+
+Data Read Miss : Perdida de memoria por acceso a la ram
+Data Write Miss
+
+PROFILING EN GPERFTOOLS:
+
+spack list google
+spack info gperftools | most
+spack load gperftools
+spack unload gperftools
+module list ... echo $PATH
+
+gcc -g -ggdb cache_lines.c -lprofiler
+CPUPROFILE=/tmp/prof.out ./a.out
+pprof --cum --text ./a.out /tmp/prof.out
+pprof --gv ./a.out /tmp/prof.out
+
+PROFILING EN BENCHMARK:
+
+Instalar benchmark con spack
+
+g++ mybenchmark.cc -std=c++11 -isystem benchmark/include \
+  -Lbenchmark/build/src -lbenchmark -lpthread -o mybenchmark
+
+
 
