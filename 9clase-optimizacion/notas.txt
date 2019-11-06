@@ -1,1 +1,13 @@
-.
+Paralelizacion:
+
+parallel
+OpenMP
+MPI
+
+Compilar OpenMp:
+g++ holamundoparallel.cpp -fopenmp
+OMP_NUM_THREADS=4
+
+Compilar MPI:
+mpic++ mpi.cpp
+mpirun -np 4 ./a.out
