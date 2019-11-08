@@ -4,10 +4,18 @@ parallel
 OpenMP
 MPI
 
-Compilar OpenMp:
-g++ holamundoparallel.cpp -fopenmp
-OMP_NUM_THREADS=4
-
 Compilar MPI:
 mpic++ mpi.cpp
 mpirun -np 4 ./a.out
+
+Compilar OpenMp:
+g++ -fopenmp openmp.cpp 
+OMP_NUM_THREADS=4 ./a.out
+
+//no hay un orden en el buffer, pues cada thread trabaja por separado
+/usr/bin/time
+
+SPEEDUP S= T[P=1]/T[P] --> P tiempo en un procesador sobre tiempo en todos los procesadores con P el numero de procesadores
+
+EFICIENCIA PARALELA E=S/P
+
