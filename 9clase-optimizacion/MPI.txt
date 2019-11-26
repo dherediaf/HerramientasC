@@ -1,0 +1,39 @@
+Message-Passing Programming
+
+MPI: Library of function/subroutine calls
+
+ #include <mpi.h> // Declaracion libreria
+
+ error = MPI_Xxxxx(parameter, ...);
+
+ int MPI_Init(int *argc, char ***argv); // Inicializa la interfaz de MPI, no paraleliza nada.
+ int MPI_Finalize(); // Finaliza la llamada a MPI
+
+MPI rank es el ID de el proceso 0, ... 
+
+ MPI_Comm_rank(MPI_Comm comm, int *rank) // Retorna el ID del proceso
+
+Ejemplo:
+
+ int rank;
+ ...
+ MPI_Comm_rank(MPI_COMM_WORDL, &ranck);
+ printf("Hello from rank %d\n", rank);
+ ...
+
+Cuantos procesos se estan corriendo, para eso existe:
+
+ MPI_Comm_size(MPI_Comm comm, int *size)
+
+Ejemplo:
+
+ ...
+ int ierr, rank, size;
+ ierr = MPI_Init(&argc, &argv);
+ ierr| = MPI_Comm_size(MPI_COMM_WORLD, &size);
+ ierr| = MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+ printf("Hello from %d of %d\n", size, rank);
+ ierr = MPI_Finalize();
+ ...
+
+ 
